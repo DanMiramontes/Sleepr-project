@@ -13,7 +13,7 @@ COPY libs libs
 
 RUN cd apps/auth && npm install
 
-RUN npm run build
+RUN npm run build auth
 
 FROM node:alpine as production
 
