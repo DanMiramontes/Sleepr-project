@@ -36,6 +36,17 @@ services:
     volumes:
       - .:/urs/src/app
 
+  notifications:
+    build: 
+      context: .
+      dockerfile: ./apps/notifications/Dockerfile
+      target: development
+    command: npm run start:dev notifications
+    env_file:
+      - ./apps/notifications/.env
+    volumes:
+      - .:/urs/src/app
+
 
   mongo:
     image: mongo
