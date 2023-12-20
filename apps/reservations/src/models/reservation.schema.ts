@@ -9,6 +9,9 @@ export class ReservationDocument extends AbstractDocument {
     @Prop()
     startDate: Date;
 
+    @Prop()
+    endDate: Date;
+
     @Prop() 
     userId: string;
 
