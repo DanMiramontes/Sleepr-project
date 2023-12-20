@@ -1,6 +1,6 @@
 steps:
   # Reservations
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args:
       [
         'build',
@@ -10,11 +10,11 @@ steps:
         'apps/reservations/Dockerfile',
         '.',
       ]
-  - name: 'grc.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args:
       ['push','us-east4-docker.pkg.dev/sleepr-407900/reservations/production']
   # Auth
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args:
       [
         'build',
@@ -24,10 +24,10 @@ steps:
         'apps/auth/Dockerfile',
         '.',
       ]
-  - name: 'gcr.io/cloud-buiders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args: ['push', 'us-east4-docker.pkg.dev/sleepr-407900/auth/production']
   # Notifications
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args:
       [
         'build',
@@ -37,10 +37,10 @@ steps:
         'apps/notifications/Dockerfile',
         '.',
       ]
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args: ['push','us-east4-docker.pkg.dev/sleepr-407900/notifications/production']
   # Payments
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args:
       [
         'build',
@@ -50,5 +50,5 @@ steps:
         'apps/payments/Dockerfile',
         '.',
       ]
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/cloud-builders/docker@sha256:13550fc742c667a6e8b130e708d89f2018b9cf500d0a21e3c336e4ede3fe111e'
     args: ['push','us-east4-docker.pkg.dev/sleepr-407900/payments/production']
